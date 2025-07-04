@@ -1,0 +1,166 @@
+.RP-container {
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  padding: 40px;
+
+  max-width: 1100px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 200;
+}
+
+/* Shared column style */
+.RP-col {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 24px; /* padding inside each column */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* spacing between children inside column */
+  align-self: flex-start;
+  backdrop-filter: blur(10px); /* Optional: match your frosted look */
+}
+
+/* Text & content enhancements */
+.RP-col-content h3 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Toast container spacing */
+.ToastContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* gap between individual toasts */
+}
+
+/* Carousel image styling */
+.carousel {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;      /* or any fixed width */
+  height: 350px;         /* fixed height */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Make carousel images responsive */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crop the image to fit container */
+  border-radius: 12px;
+}
+
+/* Caption spacing & visibility */
+.carousel-caption h3,
+.carousel-caption p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
+  color: #fff;
+  max-width: cover;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:left;
+}
+
+/* Optional: dark background for captions */
+.carousel-caption {
+  top: 0; /* position at top */
+  bottom: auto; /* remove default bottom positioning */
+  background: transparent; /* optional dark background */
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  max-width: 100%;
+  max-height: fit-content;
+  left: 50%;
+  
+}
+.RP-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  padding: 40px;
+
+  max-width: 1100px;
+  width: 90%;
+  max-height: 90vh;
+
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 200;
+}
+
+.RP-col {
+  padding: 24px;
+}
+.accordion-container{
+  max-height: 50vh; /* controls the scrollable area height */
+  overflow-y: hidden; /* enables scrolling inside */
+}
+
+/* 👇 Media query for mobile/small screens */
+@media (max-width: 768px) {
+  .RP-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  max-width: 80%;
+  height: 90vh; /* controls the scrollable area height */
+  overflow-y: auto; /* enables scrolling inside */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 200;
+  }
+
+  .RP-col {
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+     
+  }
+
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.875rem;
+  }
+}
+
+.accordion{
+ 
+  max-height: 50vh; /* controls the scrollable area height */
+  overflow-y: auto; /* enables scrolling inside */
+}
